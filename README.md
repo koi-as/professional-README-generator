@@ -8,14 +8,6 @@ As a developer, I want to create a professional README generator so that I can q
 
 
 
-## Installation
-
-N/A
-
-## License
-
-N/A
-
 ## Credits
 
 

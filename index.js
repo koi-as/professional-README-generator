@@ -11,3 +11,30 @@ function init() {}
 
 // Function call to initialize app
 init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// HIHIHIHIHIHIHIHIHIHIHIHIH These kinda look like bricks
+// IHIHIHIHIHIHIHIHIHIHIHIHI 
+// HIHIHIHIHIHIHIHIHIHIHIHIH . . .
+// IHIHIHIHIHIHIHIHIHIHIHIHI 
+// HIHIHIHIHIHIHIHIHIHIHIHIH I'm just a bit distracted ok?
+// IHIHIHIHIHIHIHIHIHIHIHIHI 
+// HIHIHIHIHIHIHIHIHIHIHIHIH . . .
+// IHIHIHIHIHIHIHIHIHIHIHIHI 
+// HIHIHIHIHIHIHIHIHIHIHIHIH You don't need to keep reading
