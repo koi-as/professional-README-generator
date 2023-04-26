@@ -23,10 +23,10 @@ ${responses.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
 - [Contribution](#contribute)
 - [Testing](#tests)
 - [Questions](#questions)
+- [License](#license)
 
 ## Installation
 
@@ -39,10 +39,6 @@ ${responses.usage}
 ## Credits
 
 
-
-## License
-
-${responses.licensing}
 
 ## How to Contribute
 
