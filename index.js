@@ -1,59 +1,58 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const generateMD = require('./utils/generateMarkdown')
+const generateMD = require('./utils/generateMarkdown.js')
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile('./util/'+fileName, data, (err) => {
-        if (err) {
-            console.error(err)
-        } else {
-            console.log('README Generated!')
-        }
-    })
+    generateMD.renderLicenseBadge(data.licensing);
+    generateMD.renderLicenseLink(data.licensing);
+    generateMD.renderLicenseSection(data.licensing);
 };
 
 function init() {
     inquirer
         .prompt([
-            // Ask user for the title of the project
             {
                 type: 'input',
                 name: 'title',
                 message: 'What do you want to title your project?'
             },
-            // A short description
             {
                 type: 'input',
                 name: 'description',
                 message: 'Provide a short description of what your project is about:'
             },
-            // Installation Instructions
             {
                 type: 'input',
                 name: 'installation',
                 message: 'Provide instructions on how to use your project:'
             },
-            // Detailed usage information
             {
                 type: 'input',
                 name: 'usage',
                 message: 'Provide descriptive usage information for your project:'
             },
-            // Contribution guidelines
             {
                 type: 'input',
                 name: 'contribution',
                 message: 'Provide descriptive contribution guidelines for your project:'
             },
-            // And testing instructions
             {
                 type: 'input',
                 name: 'testing',
                 message: 'Provide descriptive testing instructions for your project:'
             },
-            // Add a list of licensing options to select from
+            {
+                type: 'input',
+                name: 'username',
+                message: 'What is your github username?'
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is the email you want people to send you questions to?'
+            },
             {
                 type: 'list',
                 name: 'licensing',
@@ -75,16 +74,6 @@ function init() {
                     'The Unlicense'
                 ]
             },
-            {
-                type: 'input',
-                name: 'username',
-                message: 'What is your github username?'
-            },
-            {
-                type: 'input',
-                name: 'email',
-                message: 'What is the email you want people to send you questions to?'
-            }
         ])
         .then((responses) => {
             writeToFile('README.md', responses)
