@@ -119,7 +119,7 @@ ${responses.description}
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-- [Contribution](#how_to_contribute)
+- [Contribution](#contribute)
 - [Testing](#tests)
 - [Questions](#questions)
 
@@ -149,8 +149,8 @@ ${responses.testing}
 
 ## Questions
 
-Follow me at ${responses.username} on GitHub!
-If you ahve questions, reach me at ${responses.email}!
+Follow me at ${responses.username} on GitHub! </br>
+If you have questions, reach me at ${responses.email}!
             `
             )
         });
