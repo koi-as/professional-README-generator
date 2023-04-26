@@ -7,11 +7,11 @@ const inquirer = require('inquirer');
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    console.log(data)
-    // fs.writeFile(fileName, data, (err) => {
-    //     if (err) {
-    //         console.error(err)
-    //     } else {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            console.error(err)
+        } else {
+            console.log('README Generated!')
     //     // Set filename to README
     //     // What will data be?
     //     // - Generated sections that include
@@ -26,8 +26,8 @@ function writeToFile(fileName, data) {
     //     //    - Tests
     //     //    - Questions
     //     // - Input user data into the above sections
-    //     }
-    // })
+        }
+    })
 };
 
 // TODO: Create a function to initialize app
@@ -114,7 +114,7 @@ ${responses.description}
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-- [Contribution](#how)
+- [Contribution](#how to contribute)
 - [Testing](#tests)
 - [Questions](#questions)
 
@@ -125,6 +125,10 @@ ${responses.installation}
 ## Usage
 
 ${responses.usage}
+
+## Credits
+
+
 
 ## License
 
