@@ -34,11 +34,6 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer
         .prompt([
-            {
-                type: 'input',
-                name: 'username',
-                message: 'What is your github username?'
-            },
             // Ask user for the title of the project
             {
                 type: 'input',
@@ -96,6 +91,16 @@ function init() {
                     'Mozilla Public License 2.0',
                     'The Unlicense'
                 ]
+            },
+            {
+                type: 'input',
+                name: 'username',
+                message: 'What is your github username?'
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is the email you want people to send you questions to?'
             }
         ])
         .then((responses) => {
@@ -114,7 +119,7 @@ ${responses.description}
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-- [Contribution](#how to contribute)
+- [Contribution](#how_to_contribute)
 - [Testing](#tests)
 - [Questions](#questions)
 
@@ -144,7 +149,8 @@ ${responses.testing}
 
 ## Questions
 
-Follow me at ${responses.username} on GitHub if you have questions!
+Follow me at ${responses.username} on GitHub!
+If you ahve questions, reach me at ${responses.email}!
             `
             )
         });
