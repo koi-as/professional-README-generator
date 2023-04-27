@@ -1,18 +1,21 @@
+// 
 const fs = require('fs');
 const inquirer = require('inquirer');
 
 const generateMD = require('./utils/generateMarkdown.js')
 
-// TODO: Create a function to write README file
+// 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         err ? console.error(err) : console.log('README Generated!')
     })
 };
 
+// 
 function init() {
     inquirer
         .prompt([
+            // 
             {
                 type: 'input',
                 name: 'title',
@@ -76,36 +79,10 @@ function init() {
             },
         ])
         .then((responses) => {
+            // 
             writeToFile('README.md', generateMD({...responses}))
         });
 }
 
-// Function call to initialize app
+// 
 init();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// HIHIHIHIHIHIHIHIHIHIHIHIH These kinda look like bricks
-// IHIHIHIHIHIHIHIHIHIHIHIHI 
-// HIHIHIHIHIHIHIHIHIHIHIHIH . . .
-// IHIHIHIHIHIHIHIHIHIHIHIHI 
-// HIHIHIHIHIHIHIHIHIHIHIHIH I'm just a bit distracted ok?
-// IHIHIHIHIHIHIHIHIHIHIHIHI 
-// HIHIHIHIHIHIHIHIHIHIHIHIH . . .
-// IHIHIHIHIHIHIHIHIHIHIHIHI 
-// HIHIHIHIHIHIHIHIHIHIHIHIH You don't need to keep reading

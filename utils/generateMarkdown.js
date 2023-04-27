@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// 
 function renderLicenseBadge(license) {
   if (license !== 'None') {
     if (license === 'Apache License 2.0') {
@@ -34,6 +33,7 @@ function renderLicenseBadge(license) {
   }
 };
 
+// 
 function renderLicenseLink(license) {
   if (license !== 'None') {
     return `
@@ -44,6 +44,7 @@ function renderLicenseLink(license) {
   }
 };
 
+// 
 function renderLicenseSection(license) {
   if (license !== 'None') {
     return `
@@ -56,6 +57,7 @@ This project is licensed under the ${license} license.
   }
 };
 
+// 
 function generateMarkdown(data) {
   return `
 # ${data.title}
@@ -104,4 +106,5 @@ ${renderLicenseSection(data.licensing)}
 `;
 };
 
+// 
 module.exports = generateMarkdown
