@@ -5,7 +5,9 @@ const generateMD = require('./utils/generateMarkdown.js')
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data)
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.error(err) : console.log('README Generated!')
+    })
 };
 
 function init() {
@@ -74,7 +76,7 @@ function init() {
             },
         ])
         .then((responses) => {
-            writeToFile('./utils/README.md', generateMD(...responses))
+            writeToFile('README.md', generateMD({...responses}))
         });
 }
 
