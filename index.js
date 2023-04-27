@@ -5,9 +5,7 @@ const generateMD = require('./utils/generateMarkdown.js')
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    generateMD.renderLicenseBadge(data.licensing);
-    generateMD.renderLicenseLink(data.licensing);
-    generateMD.renderLicenseSection(data.licensing);
+    fs.writeFile(fileName, data)
 };
 
 function init() {
@@ -26,7 +24,7 @@ function init() {
             {
                 type: 'input',
                 name: 'installation',
-                message: 'Provide instructions on how to use your project:'
+                message: 'Provide installation instructions for your project:'
             },
             {
                 type: 'input',
@@ -76,7 +74,7 @@ function init() {
             },
         ])
         .then((responses) => {
-            writeToFile('README.md', responses)
+            writeToFile('./utils/README.md', generateMD(...responses))
         });
 }
 
