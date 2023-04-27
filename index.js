@@ -1,21 +1,21 @@
-// 
+// calling the data from node and inquirer
 const fs = require('fs');
 const inquirer = require('inquirer');
 
 const generateMD = require('./utils/generateMarkdown.js')
 
-// 
+// this function will write the user data into the generated README 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         err ? console.error(err) : console.log('README Generated!')
     })
 };
 
-// 
+// this function runs when the file is loaded
 function init() {
     inquirer
         .prompt([
-            // 
+            // these are the questions that the user will answer
             {
                 type: 'input',
                 name: 'title',
@@ -79,10 +79,10 @@ function init() {
             },
         ])
         .then((responses) => {
-            // 
+            // this sends the user inputs to the generateMarkdown file where they will be put into the skeleton README
             writeToFile('README.md', generateMD({...responses}))
         });
 }
 
-// 
+// calls the init function on file load
 init();

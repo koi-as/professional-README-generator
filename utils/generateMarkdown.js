@@ -1,4 +1,4 @@
-// 
+// This renders a badge onto the README depending on what license a user chose
 function renderLicenseBadge(license) {
   if (license !== 'None') {
     if (license === 'Apache License 2.0') {
@@ -33,7 +33,7 @@ function renderLicenseBadge(license) {
   }
 };
 
-// 
+// if a user chose a license, a link will be created in the table of contents
 function renderLicenseLink(license) {
   if (license !== 'None') {
     return `
@@ -44,7 +44,7 @@ function renderLicenseLink(license) {
   }
 };
 
-// 
+// this creates the section that provides information about the license
 function renderLicenseSection(license) {
   if (license !== 'None') {
     return `
@@ -57,7 +57,7 @@ This project is licensed under the ${license} license.
   }
 };
 
-// 
+// this uses the skeleton of a README and inputs user data to then write it later
 function generateMarkdown(data) {
   return `
 # ${data.title}
@@ -106,5 +106,5 @@ ${renderLicenseSection(data.licensing)}
 `;
 };
 
-// 
+// this is exporting the function generateMarkdown for us to use in the index.js
 module.exports = generateMarkdown
