@@ -27,7 +27,7 @@ After running node index.js, you will be prompted to answer a series of question
 Once the user has answered all of the questions, a new .md file named README will be generated. </br>
 And that's it! Simple as that, now you can generate a professional README without going through the hassle of looking up what one looks like! </br>
 
-This video will show you how to properly use the application: https://drive.google.com/file/d/1pLT5Ame03k9c0yYFFjh-MDH6-9dDlYEk/view?usp=sharing 
+This video will show you how to properly use the application: https://drive.google.com/file/d/1FT4UsyyYfgMiX32CnBkubOZGeD78YjmF/view
 
 ## Credits
 
