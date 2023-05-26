@@ -80,7 +80,7 @@ function init() {
         ])
         .then((responses) => {
             // this sends the user inputs to the generateMarkdown file where they will be put into the skeleton README
-            writeToFile('README.md', generateMD({...responses}))
+            writeToFile('lib/README.md', generateMD({...responses}))
         });
 }
 
